@@ -1,0 +1,324 @@
+/* 头 */
+.header0 {
+    font-family: 'pixel_04b_30';
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin: 44px auto 33px;
+    font-size: 75px;
+    text-decoration: line-through;
+}
+
+// 快捷栏
+.search {
+    font-family: 'pixel_04b_30';
+    font-size: 100px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, .6);
+
+    // 顶部导航栏
+    // .search-btn {}
+
+    .nav {
+        display: flex;
+        width: 100%;
+        height: 44px;
+        user-select: none;
+        justify-content: space-between;
+
+        div {
+            flex: 50%;
+            background-color: rgba(0, 0, 0, .1);
+            color: #ff6000;
+            cursor: pointer;
+            font-size: 28px;
+            text-align: center;
+
+            // &:nth-child(1) {
+            //     .s {
+            //         display         : 'none';
+            //         position        : absolute;
+            //         top             : 44px;
+            //         width           : 100%;
+            //         background-color: rgba(0, 0, 0, .6);
+            //         flex-wrap       : wrap;
+            //         justify-content : space-around;
+
+            //         li {
+            //             user-select: none;
+            //             flex       : 25%;
+            //             height     : 34px;
+            //             text-align : center;
+            //             font-size  : 17px;
+            //             color      : #fff;
+            //             text-align : center;
+            //             cursor     : pointer;
+
+            //             &:hover {
+            //                 color: #ff6000;
+            //             }
+            //         }
+            //     }
+            // }
+
+            &:nth-child(2) {
+                flex: 33.33%;
+                border-right: 4px solid white;
+                border-left: 4px solid white;
+
+                a {
+                    font-size: 14px;
+                    vertical-align: middle;
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    .s {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li {
+            user-select: none;
+            flex: 25%;
+            height: 34px;
+            text-align: center;
+            font-size: 17px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                color: #ff6000;
+            }
+        }
+    }
+}
+
+/* service通用 */
+.content1 {
+    .title1 {
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        border-radius: 150px;
+    }
+
+    .service {
+
+        .h2 {
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            margin: 15px 0;
+            color: #ff6000;
+            border-top: 1px solid #002FA7;
+        }
+
+        .article {
+            .main {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px 10px;
+                max-width: 1200px;
+                min-width: 320px;
+
+                li {
+                    flex: 20%;
+                    align-self: flex-start;
+                    background-color: rgba(0, 47, 167, 0.147);
+                    border-radius: 17px;
+                    padding: 5px;
+                    margin: 10px;
+                    overflow: hidden;
+                    width: 100%;
+
+                    a {
+                        display: flex;
+                        flex-flow: column wrap;
+                        align-items: center;
+                        font-size: 18px;
+                        text-align: center;
+
+                        span {
+                            align-self: center;
+                            width: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .backup-content {
+                        text-align: center;
+
+                        h5 {
+                            border-top: 1px solid #000;
+                            margin-top: 15px;
+                            color: #ff6000;
+                        }
+
+                        .backup {
+                            overflow: hidden;
+
+                            li {
+                                margin: 5px 0;
+                                width: 100%;
+
+                                a {
+                                    display: inline-block;
+                                    width: 100%;
+                                    font-size: 9px;
+                                    text-decoration: underline;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // gzh/wb的ul
+            .sub {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    flex: 20%;
+                    font-size: 16px;
+                    text-align: center;
+                    overflow-wrap: break-word;
+
+                    ul {
+                        display: block;
+
+                        li {
+                            margin: 10px auto;
+                            text-align: center;
+                            font-size: 16px;
+                            width: 100%;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 字幕组wb/gzh特别标题
+        .sub-h {
+            color: #002FA7;
+        }
+
+        // 特别影视资源
+        .sp-h {
+            color: pink;
+        }
+    }
+}
+
+// 新增的响应式尝试
+@media screen and (max-width : 767px) {
+    .header0 {
+        width: 100%;
+        font-size: 20vw;
+    }
+
+    .container {
+        width: 100%;
+
+        .nav {
+            height: 11.7333vw;
+
+            div {
+                font-size: 7.4667vw;
+
+                // &:nth-child(1) {
+                //     top: 11.7333vw;
+
+                //     .s {
+
+                //         li {
+                //             flex     : 50%;
+                //             font-size: 4.5333vw;
+                //         }
+                //     }
+                // }
+
+                &:nth-child(2) {
+
+                    a {
+                        font-size: 3.7333vw;
+                    }
+                }
+            }
+
+        }
+
+        .s {
+            li {
+                flex: 50%;
+                font-size: 4.5333vw;
+            }
+        }
+    }
+
+
+
+    .content1 {
+        .container {
+            width: 100vw;
+
+            .article {
+
+
+                .main {
+
+                    li {
+                        a {
+                            font-size: 4.8vw;
+
+                            span {
+                                font-size: 4.2667vw;
+                            }
+                        }
+
+                        // flex: 50%;
+                        .backup-content {
+                            .backup {
+                                li {
+                                    a {
+                                        font-size: 2.4vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .sub {
+
+                    li {
+                        font-size: 4.2667vw;
+
+                        ul {
+
+                            li {
+                                font-size: 4.2667vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

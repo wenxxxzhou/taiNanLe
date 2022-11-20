@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'pixel_04b_30';
+  src: url('../fonts/04b_30.woff2');
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+h1,
+h2,
+h5,
+.footer {
+  cursor: default;
+}
+.footer {
+  width: 1200px;
+  margin: 15px auto;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+}
+.footer ul li {
+  padding: 0 10px;
+  text-align: center;
+}
